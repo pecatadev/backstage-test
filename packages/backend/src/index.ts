@@ -32,13 +32,7 @@ import { PluginEnvironment } from './types';
 import { ServerPermissionClient } from '@backstage/plugin-permission-node';
 import { DefaultIdentityClient } from '@backstage/plugin-auth-node';
 import { DefaultEventBroker } from '@backstage/plugin-events-backend';
-const SmeeClient = require('smee-client')
 import events from './plugins/events'
-const smee = new SmeeClient({
-  source: 'https://smee.io/dszw39fDJpLuoLxs',
-  target: 'http://localhost:3000/events/http/topics/bitbucketCloud',
-  logger: console
-})
 
 const eventsSmee = smee.start()
 function makeCreateEnv(config: Config) {
