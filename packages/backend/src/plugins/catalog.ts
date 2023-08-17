@@ -27,7 +27,7 @@ export default async function createPlugin(
 
   const { processingEngine, router } = await builder.build();
   await processingEngine.start();
-  router.post('api/events/http/topics/bitbucketCloud', async (req, _res) => {
+  router.post('api/events/http/bitbucketCloud', async (req, _res) => {
     console.log( ' _res: ', _res, ' -req: ', req)
   })
   return router;
